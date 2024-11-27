@@ -1,0 +1,28 @@
+name: Data Integration Workflow
+
+on:
+  push:
+    paths:
+      - 'data-hub/**'
+      - 'Script/Data_integration.sh'
+
+jobs:
+  data_integration:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up environment
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y bash
+
+    - name: Run Data Integration Script
+      run: |
+        chmod +x Script/Data_integration.sh
+        ./Script/Data_integration.sh
+
+
+
