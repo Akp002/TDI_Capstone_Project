@@ -90,6 +90,7 @@ jobs:
       run: wc -l db/data.csv
 
     - name: Commit
+      if:  ${{ steps.changes.outputs.data == 'true' }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
