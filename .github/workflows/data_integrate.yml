@@ -10,9 +10,7 @@ on:
     paths:
       - 'data-hub/**'
       - 'Script/Data_integration.sh'
-
-  schedule:
-    - cron: '0 */1 * * *'
+      
 
 jobs:
   lint:
