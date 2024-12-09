@@ -2,7 +2,7 @@ name: Data Integration Workflow
 
 on:
   # Trigger the workflow manually for testing purposes
-  workflow_dispatch:
+  # workflow_dispatch:
 
   # Trigger the workflow on push or pull request to specific paths
   push:
